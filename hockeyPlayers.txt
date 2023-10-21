@@ -8,9 +8,7 @@ Susan Murphy 0872120473 Susan.M@gmail.com Clonmel 1
 Jessica Ryan 0871732869 Jessica.R@gmail.com Waterford 3
 Julie Hayes 0872510637 Julie.H@gmail.com Cork 4
 Sarah Cullen 0871527669 Sarah.C@gmail.com Clonmel 4
-Anna Hughes 0874328354 Anna.H@gmail.com Cork 1
 Lisa Ryan 0872137156 Lisa.R@gmail.com Cork 2
-Anna Clarke 0874146848 Anna.C@gmail.com Waterford 3
 Nancy Healy 0871482162 Nancy.H@gmail.com Dungarvan 3
 Fiona Daly 0872429526 Fiona.D@gmail.com Dungarvan 1
 Betty Moore 0873435189 Betty.M@gmail.com Dungarvan 4
@@ -31,6 +29,5 @@ Sara Ryan 0872809347 Sara.R@gmail.com Waterford 2
 Sophie Clarke 0874005554 Sophie.C@gmail.com Youghal 1
 Sophia Healy 0871534474 Sophia.H@gmail.com Cork 4
 Gloria Harty 0872070902 Gloria.H@gmail.com Dungarvan 2
-Hannah Moore 0874543516 Hannah.M@gmail.com Clonmel 3
 Alice Dunne 0873365274 Alice.D@gmail.com Waterford 4
 Julia Burke 0873014159 Julia.B@gmail.com Cork 1

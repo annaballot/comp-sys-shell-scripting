@@ -6,7 +6,8 @@
 
 echo -e "\n${GREEN}Removing Players${ENDFORMAT}"
 #could have added an option to exit to main menu here, but already covered in search.sh and report.sh
-echo -e "\n${BOLD}Search for the player you wish to remove:${ENDFORMAT}"
+echo -e "\n${BOLD}Search for the player you wish to remove (one word only e.g. first name):${ENDFORMAT}"
+#could have done some error checking to ensure user only input one word, but already covered this in add.sh script
 #allows user to input a search term, and then holds these results in a temporary file
 read searchTerm
 rm playersToRemove.txt 2> /dev/null

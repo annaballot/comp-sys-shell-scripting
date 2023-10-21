@@ -17,7 +17,8 @@ do
 
 		"Search for Name")
 			#searches for name, counts results and displays count and results
-			echo -e "\n${BOLD}Search for a name:${ENDFORMAT}"
+			#could have included error checking to ensure user only enters one word, but this is already covered in the add.sh script
+			echo -e "\n${BOLD}Search for a name (one word only):${ENDFORMAT}"
 			read searchTerm
 			results=$(grep -c -i $searchTerm hockeyPlayers.txt)
 			echo -e "\n${BOLD}There were ${results} players that matched $searchTerm.\n${ENDFORMAT}"
