@@ -1,13 +1,17 @@
 #!/bin/bash
 #Author: Anna Ballot
 #Program Description:
-#UPDATE
+#This script allows the user to add a player to the file, and does the appropriate error checkin on each field
+
+
+#should have added an option to return to the main menu here, but already covered this in report.sh and search.sh
 echo
-echo "${BOLD}Enter the players First and Last Name:${ENDFORMAT}" #error checking to check first and last
+echo "${BOLD}Enter the players First and Last Name:${ENDFORMAT}"
 echo "(Enter two words seperated by one space)"
 while :; do
 	read playerName
 	num_nms=$(echo "$playerName" | wc -w)
+		#error checking to see if user has entered both a first name and last name (and no more).
 		if [[ $num_nms -ne 2 ]]
 		then
 			echo "${RED}Please enter first and last name only${ENDFORMAT}"
@@ -37,9 +41,10 @@ while :; do
 			echo "${RED}Please enter a valid email address in the format example@domain.com${ENDFORMAT}"
 		fi
 done
-echo -e "\n${BOLD}Enter Club Name (One word Only)${ENDFORMAT}" # change this to select options
+echo -e "\n${BOLD}Enter Club Name (One word Only)${ENDFORMAT}"
 while :; do
 	read club
+	#error checking to check only one word for the club name is input
 	num_wds=$(echo "$club" | wc -w)
 		if [[ $num_wds -ne 1 ]]
 		then
@@ -55,7 +60,8 @@ echo "3) Division 3"
 echo "4) Division 4"
 while :; do
 	read division
-	[[ $division =~ ^[0-9]+$ ]] || { echo "Enter a valid number"; continue;}
+	#error checking to make sure only numbers are input, and that they are in the valid range
+	[[ $division =~ ^[0-9]+$ ]] || { echo "${RED}Enter a valid number${ENDFORMAT}"; continue;}
 	if (($division >=1 && $division <=4)); then #valid number chosen
 		break
 	else
@@ -63,6 +69,7 @@ while :; do
 	fi
 done
 sleep 1
+#shows all inputted values back to user
 echo -e "\n${BOLD}The details you have entered are:${ENDFORMAT}"
 echo "Player Name: $playerName"
 echo "Phone Number: $phoneNum"
@@ -72,6 +79,7 @@ echo "Division: $division"
 echo -e "\n${BOLD}Would you like to add these to the file? (Yes/No)${ENDFORMAT}"
 while :; do
 	read addDetails
+	#checks with user whether they want to add the above details to the file
 	case $addDetails in
 
 		[yY] | [yY][Ee][Ss] )
@@ -86,6 +94,7 @@ while :; do
 			;;
 		*)
 			echo "${RED}Invalid option, Choose Yes or No${ENDFORMAT}"
+			;;
 	esac
 done
 sleep 1

@@ -1,9 +1,11 @@
 #!/bin/bash
 #Author: Anna Ballot
 #Description
-#UPDATE
+#This scripts runs some detailed reports on the hockey players file
+
 echo -e "\n${BOLD}What report would you like to run?${ENDFORMAT}"
 COLUMNS=12
+#lets user choose option of which report they would like to run
 options=("List all hockey players in a club, with their contact details"
 	"Count number of players in each division"
 	"List all Names of players in certain division:"
@@ -12,6 +14,7 @@ select response in "${options[@]}"
 do
 	case $response in 
 		"List all hockey players in a club, with their contact details")
+			#lets user input a club name, and then resturns all names, phone numbers and emails for players in that club
 			echo "${BOLD}Which club would you like to see the players for?:${ENDFORMAT}"
 			read club
 			echo -e "\n${BOLD}listing all players in $club${ENDFORMAT}"
@@ -20,10 +23,10 @@ do
 			break
 			;;
 		"Count number of players in each division")
+			#loops through each division, and counts number of players in that division
 			echo -e "\n${BOLD}Number of players in each div${ENDFORMAT}"
-			#awk -F " " '$6!=O' hockeyPlayers.txt
 			i=1
-			while [ $i -le 4 ]
+			while [ $i -le 4 ] #could have found the max from the file, but didn't have time to implement so have hardcoded here
 			do
 				cnt=$(cat hockeyPlayers.txt | awk '{print $6}' | grep $i | wc -l)
 				echo "In Division $i there are $cnt players"
@@ -33,6 +36,7 @@ do
 			;;
 
 		"List all Names of players in certain division:")
+			#asks user to choose a division, and lists out all players in that division
 			echo -e "\n${BOLD}Enter division to filter for (1-4)${ENDFORMAT}"
 			echo "1) Division 1"
 			echo "2) Division 2"
